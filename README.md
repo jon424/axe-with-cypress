@@ -27,3 +27,4 @@ then, open the html file (located in TestReport/tests-report.html)
 
 You can see some accessibility tests passing, and others failing. Clicking on the test result will show Additional Test Context that contains the types of accessiblity errors that are present on the page you are testing:
 
+![](cypress-axe-failure-example.png)
