@@ -1,0 +1,185 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-12-08T15:39:59.101Z",
+    "end": "2021-12-08T15:39:59.101Z",
+    "duration": 10412,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666667,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "449522f3-e1bb-452f-b60b-70f0ec8f32d8",
+      "title": "",
+      "fullFile": "cypress/integration/checkPageWithoutLogo.spec.js",
+      "file": "cypress/integration/checkPageWithoutLogo.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "79328372-f464-48b8-8aae-a1da301ed66e",
+          "title": "Axe Demo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should check for a11y issues while excluding the page header section",
+              "fullTitle": "Axe Demo should check for a11y issues while excluding the page header section",
+              "timedOut": null,
+              "duration": 6516,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"C:\\\\Users\\\\Jon.Jackson\\\\Documents\\\\development\\\\cypress-axe-project\\\\TestReport\\\\assets/checkPageWithoutLogo.spec.js/Axe Demo -- should check for a11y issues while excluding the page header section (failed).png\"",
+              "code": "cy.visit(`${url}`); // cy.get(\".la-puerta__header\");\ncy.injectAxe({\n  exclude: [`${header}`]\n});\ncy.checkA11y();",
+              "err": {
+                "message": "AssertionError: 4 accessibility violations were detected: expected 4 to equal 0",
+                "estack": "AssertionError: 4 accessibility violations were detected: expected 4 to equal 0\n    at Context.eval (https://www.mihc.org/__cypress/tests?p=cypress\\support\\index.js:37675:20)",
+                "diff": null
+              },
+              "uuid": "f4a13046-4c74-471e-b35d-aaac00b7c9d1",
+              "parentUUID": "79328372-f464-48b8-8aae-a1da301ed66e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f4a13046-4c74-471e-b35d-aaac00b7c9d1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6516,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "fba59e01-343e-483d-83d7-5b6e7615be82",
+      "title": "",
+      "fullFile": "cypress/integration/axe.spec.js",
+      "file": "cypress/integration/axe.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e0926869-6bea-4d2b-9afc-b6e1decf443d",
+          "title": "Axe Demo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should catch accessibility issues on the entire page",
+              "fullTitle": "Axe Demo should catch accessibility issues on the entire page",
+              "timedOut": null,
+              "duration": 3758,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(`${url}`);\ncy.injectAxe(); //how to exclude specific rules...\n// cy.checkA11y(\n//   {},\n//   {\n//     rules: {\n//       \"page-has-heading-one\": { enabled: false },\n//     },\n//   }\n// );",
+              "err": {},
+              "uuid": "4f63e475-8d2d-4426-b60b-bda1df935872",
+              "parentUUID": "e0926869-6bea-4d2b-9afc-b6e1decf443d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "has no a11y errors in .la-puerta-logo",
+              "fullTitle": "Axe Demo has no a11y errors in .la-puerta-logo",
+              "timedOut": null,
+              "duration": 138,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.checkA11y(`${selector}`);",
+              "err": {},
+              "uuid": "786c92c4-0a7d-481a-afef-f57392054df6",
+              "parentUUID": "e0926869-6bea-4d2b-9afc-b6e1decf443d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4f63e475-8d2d-4426-b60b-bda1df935872",
+            "786c92c4-0a7d-481a-afef-f57392054df6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3896,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

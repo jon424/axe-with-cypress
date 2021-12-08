@@ -1,0 +1,24 @@
+{
+  "name": "cypress-axe-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean:reports": "rm -rf mochawesome-report/",
+    "cypress:run": "npm run clean:reports && cypress run",
+    "merge:reports": "mochawesome-merge mochawesome-report/*.json > tests-report.json",
+    "create:html:report": "marge --reportDir TestReport tests-report.json",
+    "generate:html:report": "npm run merge:reports && npm run create:html:report"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "axe-core": "^4.2.2",
+    "cypress": "^7.5.0",
+    "cypress-axe": "0.12.2",
+    "mocha": "^8.0.1",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.1.0",
+    "mochawesome-report-generator": "^5.1.0"
+  }
+}
