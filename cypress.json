@@ -5,5 +5,12 @@
     "html": false,
     "json": true
   },
-  "screenshotsFolder": "TestReport/assets"
+  "screenshotsFolder": "TestReport/assets",
+  "env": {
+    "url": "https://www.mihc.org/la-puerta/",
+    "header": ".la-puerta__header",
+    "selectors": ".la-puerta-logo"
+  },
+  "video": true,
+  "screenshotOnRunFailure": true
 }
