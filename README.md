@@ -1,30 +1,32 @@
+# A11y Testing With Cypress
+
 ## To use this project
 
-First, clone this repo to your local computer.
+In a git bash terminal, clone this repo to your local computer by running the following command in your chosen local directory:
+```
+git clone https://github.com/jon424/axe-with-cypress.git
+```
 
-Then, change directories so that your command line is located at 'cypress-axe-project'. 
+Change directories so that your terminal is located at 'axe-with-cypress':
+```
+cd axe-with-cypress
+```
 run:
 ```
-npm i
+npm install cypress --save-dev
 ```
-
-run:
-```
-cypress install
-```
-
 to run a sample test from the command line:
 ```
 npm run clean:reports & node_modules/.bin/cypress run --env url=https://www.mihc.org/la-puerta/,selectors=.la-puerta-logo
 ```
-
 then, to generate the html report:
 ```
 npm run generate:html:report
 ```
 
-then, open the html file (located in TestReport/tests-report.html)
+Then, open the html file (located in TestReport/tests-report.html)
 
-You can see some accessibility tests passing, and others failing. Clicking on the test result will show Additional Test Context that contains the types of accessiblity errors that are present on the page you are testing:
+You can see some accessibility tests passing, and others failing. Clicking on the test result will show Additional Test Context that contains the types of accessiblity errors that are present on the page you are testing.
+
 
 ![](cypress-axe-failure-example.png)
